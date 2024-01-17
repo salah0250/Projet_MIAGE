@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 20px; /* Espace entre les colonnes */
+}
+
+#userInput {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#output, .nn {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+table.nn {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table.nn td, table.nn th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table.nn tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.nn th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Styles pour la barre de défilement latérale */
+#chat-history {
+    width: 700px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    border-left: 1px solid #ccc;
+    scrollbar-width: thin;
+    scrollbar-color: #ddd #f4f4f4;
+}
+
+.user-message-container,
+.assistant-message-container {
+    margin-bottom: 16px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.user-message {
+    background-color: #f0f0f0;
+    padding: 8px;
+}
+
+.assistant-message {
+    background-color: #e0e0e0;
+    padding: 8px;
+}

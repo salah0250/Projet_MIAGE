@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Speech to text</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="index.js">
+    </head>
+   <body>
+      <div>
+      <div class="speaker" style="display: flex;justify-content: space-between;width: 13rem;box-shadow: 0 0 13px #0000003d;border-radius: 5px;">
+         <p id="action" style="color: grey;font-weight: 800; padding: 0; padding-left: 2rem;"></p>
+         <button id="speechButton">
+            <i class="fas fa-microphone"></i></button>
+      </div>
+      <h3 id="userInput" class="hide" style="    display: none;    "></h3>
+      <script type="module" src="index.js"></script>
+      <script type="module">
+         import { runSpeechRecog } from 'index.js';
+         const speechButton = document.getElementById('speechButton');
+         speechButton.addEventListener('click', runSpeechRecog);
+     </script>   
+    <div id="output" style="    display: none;    "></div>  
+             
+    <table class="nn">
+        
+    </table>
+   </div>
+   <!-- Ajoutez cette div à votre fichier HTML -->
+<div id="chat-history">
+<!-- Exemple d'un message utilisateur avec l'étiquette "Vous" -->
+<div class="user-message-container" style="display: none;">
+   <div class="label">Vous</div>
+   <div class="user-message">Contenu du message utilisateur</div>
+</div>
+
+<!-- Exemple d'un message API avec l'étiquette "Jarvis" -->
+<div class="assistant-message-container"style="display: none;">
+   <div class="label">Jarvis</div>
+   <div class="assistant-message">Contenu du message de l'API</div>
+</div>
+</div>
+   </body>
+</html>

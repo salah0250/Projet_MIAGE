@@ -1,0 +1,441 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #10221b;
+}
+
+section {
+  padding: 5rem 9%;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  border: 0.2rem solid #a0a6a3;
+  color: #b1b6b3;
+  cursor: pointer;
+  background: none;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+}
+
+.btn:hover {
+  background: #10221b;
+  color: #fff;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 4rem;
+  color: #10221b;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    z-index: 1000; /* Assurez-vous que le z-index est élevé pour être au-dessus des autres éléments */
+}
+
+.header.active {
+    background-color: #f0f0f0;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.header.active .navbar a {
+    color: #000;
+    border: #000000 1px solid;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+.header .logo  img{
+width: 200px;
+
+}
+
+.header .logo i {
+  color: #ffffff;
+}
+/* je veux que le a s'affiche dans l'autre cote de header  */
+.header .navbar {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.header .navbar a {
+  margin-left: 2rem;
+  font-size: 1.7rem;
+  color: #ffffff;
+    cursor: pointer;
+    /* en cadre le a */
+    padding: 10px 15px;
+    border: #ffffff 1px solid;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    
+
+}
+.header .navbar a:hover {
+    background: #ffffff;
+    color: #fff;
+}
+
+.header .navbar a:hover ,.header .navbar select:hover{
+  color: #130080;
+}
+
+.header .navbar #nav-close {
+  font-size: 5rem;
+  cursor: pointer;
+  color: #000000;
+  display: none;
+}
+
+.header .icons a,
+.header .icons div {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  cursor: pointer;
+  color: #000000;
+}
+
+.header .icons a:hover,
+.header .icons div:hover {
+  color: #000000;
+}
+
+.header #menu-btn {
+  display: none;
+}
+#check{
+  display: none;
+}
+
+.fas.fa-bars{
+  font-size: 31px;
+  color: #10221b;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+@media(max-width:852px){
+  .fas.fa-bars{
+  display: block;
+}
+.header{
+  background-color: #fff;
+
+}
+ ul{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 78px;
+  left: -100%;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  transition: all 0.5s;
+}
+
+
+nav ul a{
+  display: block;
+  margin: 0;
+  margin-top: 10%;
+  line-height: 50px;
+  font-size: 40px;
+}
+#check:checked~ul{
+  left: 0;
+}
+}
+
+
+.home {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  .home .box {
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-size: cover !important;
+    background-position: center !important;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    padding: 2rem 9%;
+    
+  }
+  .home .box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover !important;
+    background-position: center !important;
+    filter: brightness(50%); /* Appliquez le filtre ici */
+    z-index: -1; /* Assurez-vous que le pseudo-élément est derrière le contenu */
+}
+  .home .box.second {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .home .box.third{
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  
+.box.third{
+    background: rgba(114, 114, 114, 0.7)url(Students.jpg);
+    background-size: cover;
+    background-blend-mode: normal;
+    background-repeat: no-repeat;
+}
+
+h1 {
+  font-size: 3rem;
+    color: #ffffff;
+    padding-top: .5rem;
+    text-transform: uppercase;
+    padding-left: 70px;
+}
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.categorys {
+  width: 20%;
+  text-align: center;
+}
+
+.categorys img {
+  width: 80%;
+}
+
+
+  .home .box .content {
+    width: 50rem;
+  }
+  
+  .home .box .content span {
+    font-size: 4rem;
+    color: #ffffff;
+  }
+  
+  .home .box .content h3 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    padding-top: .5rem;
+    text-transform: uppercase;
+  }
+  
+  .home .box .content p {
+    line-height: 2;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+  }
+  
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 3rem;
+    color: #0a0459;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+
+  .category .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(29rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    gap: 1.5rem;
+  }
+  .category{
+      background-color: rgb(243, 243, 243);
+  }
+  .category .box-container .box {
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .category .box-container .box img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+  
+  .category .box-container .box h3 {
+    font-size: 2rem;
+    color: #000000;
+  }
+  
+  .category .box-container .box p {
+    font-size: 1.5rem;
+    color: #10221b;
+    padding: 1rem 0;
+    line-height: 2;
+  }
+  
+  .footer {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+  
+  .footer .box-container {
+    margin-left: 300px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .footer .box-container .box h3 {
+    font-size: 2rem;
+    padding: 1.5rem 0;
+    color: rgb(255, 255, 255);
+  }
+  
+  .footer .box-container .box a {
+    display: block;
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255);
+    padding: 1rem 0;
+  }
+  
+  .footer .box-container .box a i {
+    color: #ffffff;
+    padding-right: .5rem;
+  }
+  
+  .footer .box-container .box a:hover {
+    color: #ffffff;
+  }
+  
+  .footer .box-container .box a:hover i {
+    padding-right: 2rem;
+  }
+  
+  .footer .credit {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  .footer .credit span {
+    color: #ffffff;
+  }
+.sections {
+    display: flex;
+    flex: 100%;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.sub-section {
+    width: 50%;
+    box-sizing: border-box; 
+}
+
+.sub-section .content {
+    text-align: center;
+    padding: 4rem;
+    width: 80%; 
+    margin: auto; 
+}
+
+.sub-section .content h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    color: #000000;
+}
+
+.sub-section .content p {
+    line-height: 1.8;
+    font-size: 1.5rem;
+    margin: 2rem 0;
+}
+
+.sub-section .image {
+    text-align: center;
+}
+
+.sub-section .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+
+
+.sections:nth-child(odd) {
+    background-color: #f4f4f4;
+    color: #000;
+    margin-right: 2%;
+}

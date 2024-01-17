@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <title>Document</title>
+    <style>
+        .home {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .home .box {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background-size: cover !important;
+            background-position: center !important;
+            padding: 2rem 9%;
+            transition: background-image 0.5s ease-in-out; 
+        }
+        </style>
+</head>
+<body>
+    <header class="header">
+    <a href="https://univ-cotedazur.fr/" class="logo"> <img src="images/UCA-Logo-2niveaux-RVB.png" alt=""> </a>
+    <nav class="navbar">
+        <a href="index.html">Jarvis</a>
+    </nav>
+    </header>
+    <section class="home" id="home">
+            <div class="box">
+                <div class="content">
+                    <h3>Bienvenue à Jarvis</h3>
+                    <a href="index.html" class="btn">Commencer</a>
+                </div>
+            </div>
+    </section>
+     <!-- Nouvelle section -->
+     <section class="whatisjarvis" id="whatisjarvis">
+        <div class="sections">
+        <div class="sub-section">
+            <div class="content">
+                <h1>C'est quoi Jarvis</h1>
+                <p>Jarvis est un chatbot qui offre une interface utilisateur intuitive pour permettre aux utilisateurs de gérer un jeu à travers une conversation avec une intelligence artificielle. L'interface utilisateur comprend un tableau affichant la liste des joueurs et un historique de conversation avec une barre de défilement. Les interactions avec Jarvis se font via la reconnaissance vocale, où Jarvis détecte le mot-clé "Jarvis" pour écouter les commandes de l'utilisateur et répondre vocalement.Le modèle d'intelligence artificielle utilisé est ChatGPT, qui permet à Jarvis d'appeler des fonctions spécifiques en fonction des commandes de l'utilisateur et de maintenir un historique de conversation pour comprendre le contexte des requêtes. </p>
+            </div>
+        </div>
+        <div class="sub-section">
+            <div class="image">
+                <img src="images/jar.png" alt="Jarvis Image">
+            </div>
+        </div>
+    </div>
+    </section>
+     <section class="category" id="aboutus">
+
+        <h1 class="heading" style="color: #000000;">Equipe</h1>
+    
+        <div class="box-container">
+            <div class="box">
+                <img src="images/W.jpeg" alt="">
+                <h3>Winter Michel</h3>
+                <p>Professeur</p>
+                         <p>MIAGE</p>
+                <a href="" class="btn">read more</a>
+            </div>
+            <div class="box">
+                <img src="images/salah.jpg" alt="">
+                <h3>Aboulkacim Salah Eddine</h3>
+                <p>Etudiant</p>
+                         <p>Master MIAGE</p>
+                <a href="" class="btn">read more</a>
+            </div>
+    
+            <div class="box">
+                <img src="" alt="">
+                <h3>Ghoul Mohamed</h3>
+                <p>Etudiant</p>
+                         <p>Master MIAGE</p>
+                <a href="#" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="images/anas.jpeg" alt="">
+                <h3>Balgri Anas</h3>
+                <p>Etudiant</p>
+                         <p>Master MIAGE</p>
+                <a href="cv_2021.pdf" class="btn">read more</a>
+            </div>
+
+            <div class="box">
+                <img src="images/zouhair.jpeg" alt="">
+                <h3>Dkhrissi Zouhir</h3>
+                <p>Etudiant</p>
+                         <p>Master MIAGE</p>
+                <a href="cv_2021.pdf" class="btn">read more</a>
+            </div>
+            <div class="box">
+                <img src="images/adnsar.jpeg" alt="">
+                <h3>Adnasar Abdellah</h3>
+                <p>Etudiant</p>
+                         <p>Master MIAGE</p>
+                <a href="cv_2021.pdf" class="btn">read more</a>
+            </div>
+            <div class="box">
+                <img src="images/ayoub.jpeg" alt="">
+                <h3>El Alami El filali Ayoub</h3>
+                <p>Etudiant</p>
+                         <p>Master MIAGE</p>
+                <a href="cv_2021.pdf" class="btn">read more</a>
+            </div>
+    
+        </div>
+    
+    </section>
+    
+        </div>
+        <footer class="footer" id="footer"  style="background-image: url(images/Students.jpg);">
+            <div class="box-container">
+                <div class="box">
+                    <h3>quick links</h3>
+                    <a href="Home.html">home</a>
+                    <a href="index.html">Jarvis</a>
+                    <a href="questionnaire.html">FAQ/a>
+                    <a href="signal.html">Signal</a>
+                </div>
+        
+                <div class="box">
+                    <h3>contacte info</h3>
+                    <a href="#"> <i class="fas fa-phone"></i> +33 66666666 </a>
+                    <a href="#"> <i class="fas fa-phone"></i> +33 66666666 </a>
+                    <a href="#"> <i class="fas fa-envelope"></i> JARVISMIAGE2024@unice.com </a>
+                    <a href="#"> <i class="fas fa-map"></i> Sophia Antipolis , France</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const header = document.querySelector('.header');
+
+        function handleScroll() {
+            if (window.scrollY > 50) { 
+                header.classList.add('active');
+            } else {
+                header.classList.remove('active');
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        const homeBox = document.querySelector('.home .box');
+        const footer = document.querySelector('.footer .box-container');
+        const images = ['images/univ.png','images/studentss.jpg', 'images/ro.jpg']; 
+        let currentImageIndex = 0;
+        const bgDiv = document.createElement('div');
+    bgDiv.style.position = 'absolute';
+    bgDiv.style.top = '0';
+    bgDiv.style.right = '0';
+    bgDiv.style.bottom = '0';
+    bgDiv.style.left = '0';
+    bgDiv.style.zIndex = '-1';
+    bgDiv.style.backgroundSize = 'cover';
+    bgDiv.style.backgroundPosition = 'center';
+    bgDiv.style.filter = 'brightness(50%)';
+    homeBox.appendChild(bgDiv);
+    footer.appendChild(bgDiv);
+    function switchImage() {
+        bgDiv.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+    switchImage(); 
+        setInterval(switchImage, 3000);
+    });
+    
+  
+</script>
+</html>

@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
+    gap: 20px; /* Espace entre les colonnes */
+    background-image: url(https://img.freepik.com/photos-gratuite/fond-design-texture-bois-chene_53876-143033.jpg?w=1380&t=st=1704733320~exp=1704733920~hmac=351051137968d8baa61dbf3948e0335cc80fd696e1bcdf574c9a6b42e91dbd93);
+}
+
+#userInput {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#output, .nn {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+table.nn {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table.nn td, table.nn th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table.nn tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table.nn th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Styles pour la barre de défilement latérale */
+#chat-history {
+    width: 700px;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    border-left: 1px solid #ccc;
+    scrollbar-width: thin;
+    scrollbar-color: #ddd #f4f4f4;
+}
+
+.user-message-container,
+.assistant-message-container {
+    margin-bottom: 16px;
+}
+
+.label {
+    font-size: 12px;
+    font-weight: bold;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.user-message {
+    background-color: #f0f0f0;
+    padding: 8px;
+}
+
+.assistant-message {
+    background-color: #e0e0e0;
+    padding: 8px;
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background-color: #4CAF50; /* couleur de fond */
+    border: none; /* supprime la bordure */
+    color: white; /* couleur du texte */
+    padding: 8px 16px; /* espace autour du texte */
+    text-align: center; /* aligne le texte au centre */
+    text-decoration: none; /* supprime le soulignement */
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer; /* change le curseur en main lorsque vous survolez le bouton */
+    transition-duration: 0.4s; /* durée de l'effet de survol */
+}
+
+button:hover {
+    background-color: #45a049; 
+}
+
+#toggleVoiceResponse {
+    appearance: none;
+    background-color: #f30101;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    border-radius: 12px;
+}
+
+#toggleVoiceResponse:checked {
+    background-color: #4CAF50;
+    border-radius: 12px;
+}
+
+#toggleVoiceResponse:before {
+    content: "OFF";
+    padding-right: 10px;
+}
+
+#toggleVoiceResponse:checked:before {
+    content: "ON";
+}
+
+#microphoneButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#dropdownMenu {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    left: 10px;
+    background-color: #3498db; /* Background color: blue */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#dropdownMenu a {
+    display: block;
+    color: rgb(167, 167, 167);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+#dropdownMenu a:hover {
+    background-color: #007BFF; /* Hover background color: darker blue */
+}

@@ -1,0 +1,67 @@
+<html>
+    <head>
+      <title>Speech to text</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="index.js">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+    </head>
+    <div>
+   <body onkeydown="startRecordingOnSpace(event)" onkeyup="stopRecordingOnSpace(event)">
+      
+      <div class="checkbox-container" style="display: flex; justify-content: space-between; padding: 1rem;">
+         <label>
+             <input type="checkbox" id="toggleVoiceResponse">
+             Vocalisation de Jarvis
+         </label>
+         <label>
+            <button id="restartButton">Recommencer</button>
+            <button id="toggleButton" onclick="toggleRecognition()"></button>
+         </label>
+     </div>
+      <div class="speaker center-button" >
+         <p id="action" style="color: grey;font-weight: 800; padding: 0; padding-left: 2rem;"></p>
+         <script src="index.js"></script>
+         <button id="speechButton"  >
+            <i class="fas fa-microphone"></i></button>
+      </div>
+    
+         <div id="output" style="    display: none;    "></div>  
+         <div id="UserInput" class="hide" style="    display: none;    "></div>  
+    <table class="nn">
+        
+    </table>
+    <!-- il s'affiche avec un annimation pour felicité le gagnant  -->
+    <p id="alert" style="display: none;">
+   </p>
+   </div>
+   <div id="chat-history">
+      <div class="user-message-container" style="display: none;">
+          <div class="label">Vous</div>
+          <div class="user-message">Contenu du message utilisateur</div>
+      </div>
+      
+      <div class="assistant-message-container"style="display: none;">
+          <div class="label">Jarvis</div>
+          <div class="assistant-message">Contenu du message de l'API</div>
+      </div>
+      </div>
+      <!-- Bouton -->
+<!-- Bouton -->
+<button id="questionButton" onclick="toggleMenu()" style="position: fixed; bottom: 10px; left: 10px; width: 50px; height: 50px; border-radius: 50%; background-color: #007BFF; color: white; border: none;">
+   <i class="fas fa-question"></i>
+</button>
+
+<!-- Menu déroulant -->
+<div id="dropdownMenu" style="display: none; position: fixed; bottom: 70px; left: 10px; background-color: white; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); z-index: 1; border: 1px solid #007BFF; border-radius: 5px;">
+   <!-- FAQ -->
+   <a href="questionnaire.html">Aide & FAQ</a>
+   <!-- Signal des bugs -->
+   <a href="signal.html">Signal des bugs</a>
+   <!-- Page d'accuiel-->
+   <a href="home.html">Accueil</a>
+</div>
+   </body>
+</html>

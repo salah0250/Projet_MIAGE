@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+    <input type="text" id="userInput" placeholder="Type your message...">
+    <button onclick="sendRequest()" >Send Request</button>
+    <div id="output" style="    display: none;    "></div>  
+
+    
+    <table class="nn">
+        
+    </table>
+</div>
+<div id="chat-history">
+<div class="user-message-container" style="display: none;">
+    <div class="label">Vous</div>
+    <div class="user-message">Contenu du message utilisateur</div>
+</div>
+
+<div class="assistant-message-container"style="display: none;">
+    <div class="label">Jarvis</div>
+    <div class="assistant-message">Contenu du message de l'API</div>
+</div>
+</div>
+</body>
+</html>

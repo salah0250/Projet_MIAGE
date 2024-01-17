@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAQ Page</title>
+        <style>
+       body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    background-color: #a2a2a2; 
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+        header img {
+            height: 70px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 0;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-input::placeholder {
+            color: #777;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .container {
+    margin-top: 200px; 
+    width: 70%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        .faq-section {
+            margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;        }
+
+        .faq-item {
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            padding: 15px;
+            transition: background-color 0.3s ease;
+            position: relative;
+        }
+
+        .faq-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        .question {
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            margin-top: 10px;
+            padding-left: 20px;
+            color: #555;
+        }
+
+        .answer.active {
+            max-height: 500px; /* Adjust as needed */
+            transition: max-height 0.5s ease;
+        }
+
+        .question-arrow {
+            width: 20px;
+            height: 20px;
+            transform: rotate(0deg);
+            transition: transform 0.3s ease;
+            margin-left: 250px;
+        }
+
+        .faq-item.active .question-arrow {
+            transform: rotate(90deg);
+        }
+    </style>
+        </style>
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+           <a href="https://univ-cotedazur.fr/"><img src="images/UCA-Logo-2niveaux-RVB.png" alt="Logo"></a>
+        </div>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search..." oninput="searchQuestions()">
+            <div class="search-icon">&#128269;</div>
+        </div>
+        <div class="logo" style="padding-right: 10px;">
+            <a href="index.html">Jarvis</a>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Jarvis - FAQ</h1>
+        <div class="faq-section" id="faq-section">
+            <div class="faq-item" onclick="toggleAnswer('q1')">
+                <div class="question">
+                    <h4>Comment puis-je ajouter un nouveau joueur au jeu avec Jarvis ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q1-answer">Utilisez la commande vocale "Jarvis, ajoute un joueur" suivi du nom du joueur que vous souhaitez ajouter.</div>
+            </div>
+        
+            <div class="faq-item" onclick="toggleAnswer('q2')">
+                <div class="question">
+                    <h4>Comment puis-je supprimer un joueur existant du jeu avec Jarvis ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q2-answer">Dites "Jarvis, supprime le joueur" suivi du nom du joueur que vous souhaitez retirer.</div>
+            </div>
+        
+            <div class="faq-item" onclick="toggleAnswer('q3')">
+                <div class="question">
+                    <h4>Comment fonctionne la fonction pour créer un nouveau jeu avec Jarvis ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q3-answer">Dites "Jarvis, crée un nouveau jeu" et suivez les instructions pour spécifier l'ID du jeu, la liste des joueurs et leurs scores initiaux.</div>
+            </div>
+        
+            <div class="faq-item" onclick="toggleAnswer('q4')">
+                <div class="question">
+                    <h4>Est-il possible de répéter un jeu précédent avec Jarvis ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q4-answer">Oui, vous pouvez utiliser la commande "Jarvis, répète le jeu" suivi des noms des joueurs et de leurs scores.</div>
+            </div>
+        
+            <div class="faq-item" onclick="toggleAnswer('q5')">
+                <div class="question">
+                    <h4>Comment Jarvis détecte-t-il le mot-clé pour commencer l'écoute des commandes ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q5-answer">Jarvis commence à écouter les commandes lorsque le mot "Jarvis" est détecté dans votre discours.</div>
+            </div>
+        
+            <div class="faq-item" onclick="toggleAnswer('q6')">
+                <div class="question">
+                    <h4>Comment faire défiler l'historique de la conversation dans l'interface utilisateur de Jarvis ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q6-answer">Utilisez la barre de défilement d'historique en faisant défiler vers le haut pour voir les messages plus anciens et vers le bas pour voir les messages plus récents.</div>
+            </div>
+        
+            <div class="faq-item" onclick="toggleAnswer('q7')">
+                <div class="question">
+                    <h4>Quelle est la fonction de Jarvis lorsque le mot "Jarvis" est détecté ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q7-answer">Lorsque le mot "Jarvis" est détecté, Jarvis se met en mode d'écoute des commandes de l'utilisateur.</div>
+            </div>
+        
+            <div class="faq-item" onclick="toggleAnswer('q8')">
+                <div class="question">
+                    <h4>Comment Jarvis répond-il aux commandes vocales ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q8-answer">Jarvis répond vocalement aux commandes de l'utilisateur et ajoute également sa réponse à l'historique de la conversation.</div>
+            </div>
+        
+            <div class="faq-item" onclick="toggleAnswer('q9')">
+                <div class="question">
+                    <h4>Quel modèle d'intelligence artificielle utilise Jarvis ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q9-answer">Jarvis utilise le modèle d'intelligence artificielle ChatGPT pour comprendre et répondre aux commandes de l'utilisateur.</div>
+            </div>
+        
+            <div class="faq-item" onclick="toggleAnswer('q10')">
+                <div class="question">
+                    <h4>Quelles sont les conditions pour créer un nouveau jeu avec Jarvis ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q10-answer">Pour créer un nouveau jeu, utilisez la commande "Jarvis, crée un nouveau jeu" et suivez les conditions spécifiées, telles que la création d'un jeu unique et l'initialisation des joueurs avec des scores à zéro.</div>
+            </div>
+            <div class="faq-item" onclick="toggleAnswer('q11')">
+                <div class="question">
+                    <h4>Comment puis-je envoyer un message sans utiliser le mot Jarvis ?</h4>
+                    <div class="question-arrow">&#10148;</div>
+                </div>
+                <div class="answer" id="q11-answer">Utilisez la bar espace, clic sur la bar espace suiver de message et relacher votre doigt.</div>
+            </div>
+        </div>
+    </div>
+    <script>
+    function toggleAnswer(questionId) {
+            var answer = document.getElementById(questionId + '-answer');
+            answer.classList.toggle('active');
+        }
+
+        function searchQuestions() {
+            var input, filter, faqSection, faqItem, question, i, txtValue;
+            input = document.querySelector('.search-input');
+            filter = input.value.toUpperCase();
+            faqSection = document.getElementById('faq-section');
+            faqItem = faqSection.getElementsByClassName('faq-item');
+
+            for (i = 0; i < faqItem.length; i++) {
+                question = faqItem[i].getElementsByClassName('question')[0];
+                txtValue = question.textContent || question.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    faqItem[i].style.display = "";
+                } else {
+                    faqItem[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
